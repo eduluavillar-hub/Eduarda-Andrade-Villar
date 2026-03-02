@@ -1,44 +1,45 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
 }
 
-.card {
-    background: linear-gradient(145deg, #ffffff, #e6e6e6);
-    border-radius: 15px;
-    box-shadow: 5px 5px 20px #d1d1d1, -5px -5px 20px #ffffff;
-    margin: 15px;
-    transition: all 0.3s ease;
-    width: 300px;
+.header {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeIn 2s;
 }
 
-.card:hover {
-    box-shadow: 5px 5px 40px #bfbfbf, -5px -5px 40px #ffffff;
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff4081;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.card-title {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5em;
-    color: #333;
-    padding: 10px;
+.button:hover {
+  background-color: #ff80ab;
 }
 
-.card-content {
-    font-family: 'Verdana', sans-serif;
-    color: #666;
-    padding: 0 10px 10px;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (max-width: 768px) {
-    .card {
-        width: 90%;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .card {
-        width: 45%;
-    }
+  .header {
+    font-size: 2em;
+  }
+  .button {
+    font-size: 1em;
+  }
 }
