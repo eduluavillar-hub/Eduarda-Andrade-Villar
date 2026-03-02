@@ -1,66 +1,44 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
 }
 
-.section {
-    flex: 1 1 calc(33.333% - 20px);
-    margin: 10px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.section:hover {
-    transform: scale(1.05);
-}
-
-.button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-.input {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin: 10px 0;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px #d1d1d1, -5px -5px 20px #ffffff;
+    margin: 15px;
+    transition: all 0.3s ease;
+    width: 300px;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 40px #bfbfbf, -5px -5px 40px #ffffff;
+}
+
+.card-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: #333;
+    padding: 10px;
+}
+
+.card-content {
+    font-family: 'Verdana', sans-serif;
+    color: #666;
+    padding: 0 10px 10px;
 }
 
 @media (max-width: 768px) {
-    .section {
-        flex: 1 1 calc(50% - 20px);
+    .card {
+        width: 90%;
     }
 }
 
-@media (max-width: 480px) {
-    .section {
-        flex: 1 1 100%;
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        width: 45%;
     }
 }
